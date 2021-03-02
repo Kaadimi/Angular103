@@ -1,0 +1,23 @@
+services is a great way to share data among classes that don't know each other
+
+service boilerPlat {
+    import { Injectable } from '@angular/core'
+    import { Observable } from 'rxjs' // Obersvable is an interface for common asynchronous operations and it exposes a subscribe method that returns after the data is returned.
+    import { of } from 'rxjs' // of return an Observable
+
+    @Injectable({ // injectable makes the class to be a dependency in other classes
+        providedIn: 'root', // to make a singleton instance of the service
+    })
+
+    export class Service {
+        constructor()
+
+        getters(): Observable<TYPE> {
+            return of(DATA)
+        }
+    }
+}
+
+hero.service { // put ur getters and setters in the services classes
+
+}
