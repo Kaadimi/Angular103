@@ -1,0 +1,17 @@
+// single page application require routing to change component depending on the browser route
+
+import { NgModel } from '@angular/core'
+import { RouterModel, Routes } from '@angular/route'
+
+const route: Routes = [ // Routes is an interface for routes
+    {path, component} // path - component pairs to describe the component to load depending on the active route
+]
+
+@NgModel({ // this ngModel set up the module to start listening for browser route changes
+    imports: [RouterModel.forRoot(routes)], // configure the routes at the root level
+    exports: [RouterModel] // exposes the routerModel to the whole app which let us use route-outlet in our html file
+})
+
+export class AppRoutingModel {
+
+}
